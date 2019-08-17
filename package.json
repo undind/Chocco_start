@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/undind/undind.github.io/issues"
   },
-  "homepage": "https://github.com/undind/undind.github.io",
+  "homepage": "https://github.com/undind/undind.github.io/app",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
