@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 25px;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.nav__link {
+  color: $white;
+  font-size: 18px;
+  font-family: $regular;
+}
+
+.contacts__tel {
+  font-size: 24px;
+  color: $white;
+  font-family: $regular;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../img/header-menu/phone_head.png") center center no-repeat;
+  }
+}

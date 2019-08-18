@@ -31,7 +31,7 @@ function styles() {
 }
 
 function watchFiles() {
-  gulp.watch("./app/scss/**/*", browserSyncReload);
+  gulp.watch("./app/scss/**/*", styles);
   gulp.watch('./app/*.html', browserSyncReload);
 }
 

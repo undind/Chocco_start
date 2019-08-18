@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family: $regular;
+  color: $white;
+}
+.wrapper {
+  overflow: hidden;
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}

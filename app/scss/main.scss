@@ -1,5 +1,9 @@
-$red: red;
-.class {
-  width: 100%;
-  justify-content: 10px;
-}
+@import "templates/fonts.scss";
+
+@import "templates/variables.scss";
+@import "templates/nomalize.scss";
+@import "templates/base.scss";
+
+@import "blocks/main-section.scss";
+@import "blocks/header-nav.scss";
+@import "blocks/why-sec.scss";
