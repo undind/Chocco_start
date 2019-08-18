@@ -5,7 +5,10 @@ $grey: #666666;
 $regular: 'AlegreyaSans-Regular', 'Arial', sans-serif;
 $bold: 'AlegreyaSans-Bold', 'Arial', sans-serif;
 $extra: 'AlegreyaSans-ExtraBold', 'Arial', sans-serif;
+$light: 'AlegreyaSans-Light', 'Arial', sans-serif;
+$medium: 'AlegreyaSans-Medium', 'Arial', sans-serif;
 
 @function rem($px) {
   @return $px / 16px + 0rem;
 }
+

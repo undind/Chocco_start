@@ -7,7 +7,7 @@
     background: url('../img/bg/pattern-header.png') right bottom/contain no-repeat;
     background-color: #61c4d9;
     position: relative;
-    padding-bottom: 44px;
+    padding-bottom: 50px;
     &::after {
       content: '';
       display: block;
@@ -74,9 +74,11 @@
   }
   &__item {
     display: flex;
+    margin-right: 28px;
   }
   &__pic {
     margin-right: 10px;
+    width: 100%;
   }
   &__img {
     display: block;

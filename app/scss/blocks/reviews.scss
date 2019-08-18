@@ -1,0 +1,64 @@
+.reviews {
+  margin-top: 65px;
+  position: relative;
+  &__title {
+    font-size: 48px;
+    color: $title;
+    font-family: $bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  &__content {
+    background: url('../img/bg/reviews-bg.png') center center/cover no-repeat;
+    padding: 50px;
+    display: flex;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -27%;
+      right: -7%;
+      width: 150px;
+      height: 86px;
+      background: url('../img/reviews/berry-rev.png') center center/contain no-repeat;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+  &__description {
+    margin-left: 20px;
+    flex: 2;
+  }
+  &__avatars {
+    margin-top: 27px;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin-right: 11px;
+    border: 6px solid #0f5a47;
+    border-radius: 50%;
+  }
+}
+
+.description {
+  &__title {
+    color: #323232;
+    font-size: 30px;
+    font-family: $medium;
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+  &__text {
+    color: $grey;
+    margin-bottom: 30px;
+    width: 77%;
+  }
+  &__author {
+    color: $grey;
+    font-family: $medium;
+  }
+}
