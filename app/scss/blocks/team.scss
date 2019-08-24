@@ -1,0 +1,80 @@
+.team {
+  position: relative;
+  &::after {
+    content: '';
+    width: rem(196px);
+    height: rem(578px);
+    position: absolute;
+    right: 0;
+    top: -23%;
+    background: url('../img/team/team-bg.png') center center / cover no-repeat;
+  }
+
+  &:before {
+    content: '';
+    width: rem(104px);
+    height: rem(114px);
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+    background: url('../img/team/team-berry.png') center center / cover no-repeat;
+  }
+}
+
+.team__title {
+  margin-bottom: rem(57px);
+}
+
+.team__list {
+  display: flex;
+  color: $black;
+}
+
+.team__item {
+  flex: 1;
+  margin-right: rem(20px);
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team__author {
+  font-size: rem(21px);
+  font-family: $medium;
+  margin-right: rem(5px);
+}
+
+.team__picture {
+  margin-bottom: rem(25px);
+}
+
+.team__desc {
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(13px);
+}
+
+.team__img {
+  max-width: 100%;
+}
+
+.team__icon {
+  width: rem(9px);
+  height: rem(6px);
+}
+
+.team__position {
+  height: 0;
+  overflow: hidden;
+}
+
+.position__title {
+  color: #281e1e;
+  margin-bottom: rem(3px);
+}
+
+.position__desc {
+  font-family: $light;
+}
