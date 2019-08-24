@@ -2,7 +2,7 @@
 	font-family: 'AlegreyaSans-Black';
 	src: local('AlegreyaSans-Black'), local('AlegreyaSans-Black'),
 		url('../fonts/AlegreyaSans-Black.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 900;
 	font-style: normal;
 }
 
@@ -34,7 +34,7 @@
 	font-family: 'AlegreyaSans-ExtraBold';
 	src: local('AlegreyaSans-ExtraBold'), local('AlegreyaSans-ExtraBold'),
 		url('../fonts/AlegreyaSans-ExtraBold.ttf') format('truetype');
-	font-weight: bolder;
+	font-weight: 800;
 	font-style: normal;
 }
 
@@ -42,7 +42,7 @@
 	font-family: 'AlegreyaSans-ExtraBoldItalic';
 	src: local('AlegreyaSans-ExtraBoldItalic'), local('AlegreyaSans-ExtraBoldItalic'),
 		url('../fonts/AlegreyaSans-ExtraBoldItalic.ttf') format('truetype');
-	font-weight: bolder;
+	font-weight: 800;
 	font-style: italic;
 }
 
@@ -74,7 +74,7 @@
 	font-family: 'AlegreyaSans-Medium';
 	src: local('AlegreyaSans-Medium'), local('AlegreyaSans-Medium'),
 		url('../fonts/AlegreyaSans-Medium.ttf') format('truetype');
-	font-weight: 400;
+	font-weight: 500;
 	font-style: normal;
 }
 
@@ -98,7 +98,7 @@
 	font-family: 'AlegreyaSans-Thin';
 	src: local('AlegreyaSans-Thin'), local('AlegreyaSans-Thin'),
 		url('../fonts/AlegreyaSans-Thin.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 100;
 	font-style: normal;
 }
 
@@ -106,6 +106,6 @@
 	font-family: 'AlegreyaSans-ThinItalic';
 	src: local('AlegreyaSans-ThinItalic'), local('AlegreyaSans-ThinItalic'),
 		url('../fonts/AlegreyaSans-Thin.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 100;
 	font-style: italic;
 }

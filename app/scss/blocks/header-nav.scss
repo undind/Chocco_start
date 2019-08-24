@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
+  padding-top: rem(24px);
 }
 
 .nav__list {
@@ -10,7 +10,7 @@
 }
 
 .nav__item {
-  margin-right: 25px;
+  margin-right: rem(25px);
   &:last-child {
     margin: 0;
   }
@@ -18,15 +18,16 @@
 
 .nav__link {
   color: $white;
-  font-size: 18px;
+  font-size: rem(18px);
   font-family: $regular;
 }
 
 .contacts__tel {
-  font-size: 24px;
+  font-size: rem(24px);
   color: $white;
   font-family: $regular;
   position: relative;
+  z-index: 2;
   &::before {
     content: '';
     display: block;
