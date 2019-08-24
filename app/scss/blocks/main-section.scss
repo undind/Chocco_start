@@ -81,11 +81,13 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    margin-top: rem(68px);
   }
   &__item {
     display: flex;
     margin-right: rem(28px);
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &__pic {
     margin-right: rem(10px);
@@ -94,4 +96,11 @@
   &__img {
     display: block;
   }
+}
+
+.features__icon {
+  width: rem(44px);
+  height: rem(41px);
+  fill:#61c4d9;
+  stroke:#b0f7ff;
 }

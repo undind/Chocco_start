@@ -1,5 +1,14 @@
 .reviews {
   position: relative;
+  &::before {
+    content: '';
+    width: rem(139px);
+    height: rem(321px);
+    background: url('../img/reviews/reviews-bg.png') center center / contain no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -16%;
+  }
   &__title {
     margin-bottom: rem(44px);
   }

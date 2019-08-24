@@ -1,0 +1,35 @@
+.fixed-menu {
+  position: fixed;
+  top: 216px;
+  right: 45px;
+}
+
+.fixed-menu__item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: rem(4px);
+  position: relative;
+  cursor: pointer;
+
+  &--active {
+    border-color: $white;
+  }
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
