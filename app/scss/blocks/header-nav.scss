@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: rem(24px);
+  z-index: 3;
 }
 
 .nav__list {
@@ -39,4 +40,8 @@
     transform: translateY(-50%);
     background: url("../img/header-menu/phone_head.png") center center no-repeat;
   }
+}
+
+.hamburger-menu-link {
+  display: none;
 }

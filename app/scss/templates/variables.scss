@@ -10,10 +10,6 @@ $extra: 'AlegreyaSans-ExtraBold', 'Arial', sans-serif;
 $light: 'AlegreyaSans-Light', 'Arial', sans-serif;
 $medium: 'AlegreyaSans-Medium', 'Arial', sans-serif;
 
-@function rem($px) {
-  @return $px / 16px + 0rem;
-}
-
 $tablets: 768px;
 $phones: 480px;
 $phones-small: 320px;
