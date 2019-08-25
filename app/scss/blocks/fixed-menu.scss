@@ -1,21 +1,28 @@
 .fixed-menu {
   position: fixed;
-  top: 216px;
-  right: 45px;
+  top: 50%;
+  right: rem(46px);
+  transform: translateY(-50%);
 }
 
 .fixed-menu__item {
-  width: 16px;
-  height: 16px;
+  &--active {
+    & .fixed-menu__dot {
+      border-color: $white;
+      box-shadow: 0 0 2px #918e8e;
+    }
+  }
+}
+
+.fixed-menu__dot {
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: rem(4px);
+  margin-bottom: rem(10px);
   position: relative;
-  cursor: pointer;
-
-  &--active {
-    border-color: $white;
-  }
+  display: block;
+  text-decoration: none;
 
   &::before {
     content: '';
@@ -27,6 +34,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 2px #918e8e;
   }
 
   &:last-child {
