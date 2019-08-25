@@ -64,6 +64,10 @@
       width: 100%;
       padding: 0 23%;
     }
+
+    @include phones {
+      padding: 0 7%;
+    }
   }
 
   &__link {
@@ -110,6 +114,10 @@
         top: rem(62px);
         left: 0;
         background: url('../img/bg/tablets-bg-head.png') center center / contain no-repeat;
+
+        @include phones {
+          top: rem(15px);
+        }
       }
     }
   }
@@ -118,6 +126,10 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include phones {
+      margin-left: rem(-10px);
+    }
   }
   &__item {
     display: flex;

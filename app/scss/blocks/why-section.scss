@@ -8,6 +8,10 @@
     background: url('../img/bg/leaves-why.png') center center/cover no-repeat;
     top: 50%;
     transform: translateY(-50%);
+
+    @include phones {
+      display: none;
+    }
   }
   &::after {
     content: '';
@@ -17,6 +21,10 @@
     top: 77%;
     left: 0;
     background: url('../img/bg/raspberries-why.png') center center/cover no-repeat;
+
+    @include phones {
+      display: none;
+    }
   }
   &__title {
     margin-bottom: rem(13px);
@@ -31,6 +39,11 @@
     @include tablets {
       margin-bottom: rem(20px);
       width: 55%;
+    }
+
+    @include phones {
+      width: 100%;
+      margin-bottom: rem(40px);
     }
   }
   &__list {
@@ -54,6 +67,11 @@
     margin-bottom: rem(15px);
   }
 
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+  }
+
   &:last-child {
     .because__logo::after {
       display: none;
@@ -72,6 +90,12 @@
     position: relative;
     @include tablets {
       margin-bottom: rem(15px);
+    }
+
+    @include phones {
+      flex-shrink: 0;
+      margin-right: rem(13px);
+      margin-bottom: 0;
     }
     &::after {
       content: '';
@@ -101,10 +125,19 @@
     @include tablets {
       margin-bottom: rem(10px);
     }
+
+    @include phones {
+      text-align: left;
+      margin-bottom: rem(15px);
+    }
   }
   &__text {
     color: $grey;
     font-family: $light;
+
+    @include phones {
+      text-align: left;
+    }
   }
 }
 
