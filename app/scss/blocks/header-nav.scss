@@ -6,14 +6,20 @@
   z-index: 3;
 }
 
+.header__buttons {
+  @include tablets {
+    display: none;
+  }
+}
+
 .nav__list {
   display: flex;
 }
 
 .nav__item {
-  margin-right: rem(25px);
+  margin-right: rem(15px);
   &:last-child {
-    margin: 0;
+    margin-right: 0;
   }
 }
 
@@ -40,8 +46,8 @@
     transform: translateY(-50%);
     background: url("../img/header-menu/phone_head.png") center center no-repeat;
   }
-}
 
-.hamburger-menu-link {
-  display: none;
+  @include tablets {
+    display: none;
+  }
 }

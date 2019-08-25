@@ -7,10 +7,14 @@
   }
 
   &__section {
-    background: url('../img/bg/pattern-header.png') right bottom/contain no-repeat;
+    background: url('../img/bg/pattern-header.png') right bottom / contain no-repeat;
     background-color: #61c4d9;
     position: relative;
     padding-bottom: rem(50px);
+
+    @include tablets {
+      background: url('../img/bg/pattern-header.png') right top / 75% no-repeat #61c4d9;
+    }
     &::after {
       content: '';
       display: block;
@@ -18,7 +22,10 @@
       height: rem(345px);
       position: absolute;
       bottom: -50px;
-      background: url('../img/bg/leaves-header.png') center center/contain no-repeat;
+      background: url('../img/bg/leaves-header.png') center center / contain no-repeat;
+      @include tablets {
+        display: none;
+      }
     }
   }
 
@@ -27,6 +34,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    @include tablets {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__content {
@@ -46,6 +59,11 @@
     font-size: rem(21px);
     margin-bottom: rem(32px);
     width: 75%;
+
+    @include tablets {
+      width: 100%;
+      padding: 0 23%;
+    }
   }
 
   &__link {
@@ -69,12 +87,31 @@
 
   &__picture {
     position: absolute;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 42px;
+    top: 50%;
     right: -51px;
+    transform: translateY(-50%);
+
+    @include tablets {
+      transform: initial;
+      position: relative;
+      top: rem(-20px);
+      right: 0;
+      width: 100%;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: rem(62px);
+        left: 0;
+        background: url('../img/bg/tablets-bg-head.png') center center / contain no-repeat;
+      }
+    }
   }
 }
 .features {

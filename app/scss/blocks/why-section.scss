@@ -28,10 +28,18 @@
     color: $grey;
     font-size: rem(18px);
     margin-bottom: rem(55px);
+    @include tablets {
+      margin-bottom: rem(20px);
+      width: 55%;
+    }
   }
   &__list {
     display: flex;
     justify-content: space-between;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
@@ -40,6 +48,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include tablets {
+    width: 65%;
+    margin-bottom: rem(15px);
+  }
+
   &:last-child {
     .because__logo::after {
       display: none;
@@ -56,15 +70,21 @@
     justify-content: center;
     margin-bottom: rem(35px);
     position: relative;
+    @include tablets {
+      margin-bottom: rem(15px);
+    }
     &::after {
       content: '';
       width: rem(67px);
       height: rem(21px);
-      background: url('../img/icons/why-dots.png') center center/cover no-repeat;
+      background: url('../img/icons/why-dots.png') center bottom / 75% no-repeat;
       position: absolute;
       left: 151%;
       top: 50%;
       transform: translateY(-50%);
+      @include tablets {
+        display: none;
+      }
     }
   }
   &__img {
@@ -78,6 +98,9 @@
     font-family: $bold;
     font-size: rem(27px);
     margin-bottom: rem(25px);
+    @include tablets {
+      margin-bottom: rem(10px);
+    }
   }
   &__text {
     color: $grey;

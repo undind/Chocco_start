@@ -5,6 +5,10 @@
 .orders__title {
   color: $green;
   margin-bottom: rem(55px);
+
+  @include tablets {
+    margin-bottom: rem(44px);
+  }
 }
 
 .form__elem {
@@ -12,13 +16,23 @@
   display: -ms-flexbox;
   display: flex;
   color: $green;
+  margin-right: rem(-20px);
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
 }
 
 .form__column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 50%;
   margin-right: rem(20px);
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -29,6 +43,11 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: rem(9px);
+
+  @include tablets {
+    justify-content: center;
+    margin-bottom: rem(15px);
+  }
 }
 
 .form__block {
@@ -44,6 +63,10 @@
 
   &-title {
     margin-bottom: rem(7px);
+  }
+
+  &--textarea {
+    margin-right: 0;
   }
 }
 
@@ -136,6 +159,10 @@
 .form__check--area:checked + .form__check--fake::before {
   content: '✔';
   font-size: rem(23px);
+}
+
+.form__buttons {
+  text-align: center;
 }
 
 .btn {

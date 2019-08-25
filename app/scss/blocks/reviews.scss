@@ -17,6 +17,13 @@
     padding: rem(50px);
     display: flex;
     position: relative;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      max-width: rem(460px);
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -25,8 +32,28 @@
       width: rem(150px);
       height: rem(86px);
       background: url('../img/reviews/berry-rev.png') center center/contain no-repeat;
+
+      @include tablets {
+        right: -35%;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: none;
+  
+      @include tablets {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: rem(119px);
+        height: rem(167px);
+        background: url('../img/reviews/reviews-flower.png') center center / cover no-repeat;
+      }
     }
   }
+
   &__img {
     display: block;
     max-width: 100%;
@@ -34,6 +61,11 @@
   &__description {
     margin-left: rem(20px);
     flex: 2;
+
+    @include tablets {
+      margin-left: 0;
+      text-align: center;
+    }
   }
   &__avatars {
     margin-top: rem(27px);
@@ -44,6 +76,20 @@
     margin-right: rem(11px);
     border: 6px solid #0f5a47;
     border-radius: 50%;
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.reviews__photo {
+  @include tablets {
+    margin-top: rem(30px);
+    max-width: rem(204px);
   }
 }
 
@@ -59,6 +105,10 @@
     color: $grey;
     margin-bottom: rem(30px);
     width: 77%;
+
+    @include tablets {
+      width: 100%;
+    }
   }
   &__author {
     color: $grey;

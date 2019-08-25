@@ -3,6 +3,9 @@
   top: 50%;
   right: rem(46px);
   transform: translateY(-50%);
+  @include tablets {
+    display: none;
+  }
 }
 
 .fixed-menu__item {
