@@ -25,7 +25,10 @@ function styles() {
     .src("./app/scss/*.scss")
     .pipe(concat('style.css'))
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(postcss([autoprefixer({
+      overrideBrowserslist:  ['last 2 versions'],
+      cascade: false
+    }), cssnano()]))
     .pipe(gulp.dest('./app/css'))
     .pipe(browsersync.stream());
 }
