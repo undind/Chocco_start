@@ -59,9 +59,17 @@
   content: "";
   display: block; }
 .hamburger-inner::before {
-  top: -10px; }
+  top: -10px; 
+  @include phones {
+    top: -8px;
+  }
+}
 .hamburger-inner::after {
-  bottom: -10px; }
+  bottom: -10px; 
+  @include phones {
+    bottom: -8px;
+  }
+}
 .hamburger--stand .hamburger-inner {
   transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear; }
 .hamburger--stand .hamburger-inner::before {
