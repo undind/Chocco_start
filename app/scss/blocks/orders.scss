@@ -9,6 +9,10 @@
   @include tablets {
     margin-bottom: rem(44px);
   }
+
+  @include phones {
+    margin-bottom: rem(36px);
+  }
 }
 
 .form__elem {
@@ -21,6 +25,11 @@
   @include tablets {
     flex-direction: column;
     padding: 0 18%;
+  }
+
+  @include phones {
+    padding: 0;
+    margin-right: 0;
   }
 }
 
@@ -76,10 +85,19 @@
   width: 100%;
   border: 3px solid transparent;
 
+  @include phones {
+    padding: rem(17px) rem(11px);
+  }
+
   &--textarea {
     resize: none;
     height: rem(180px);
     margin-bottom: rem(35px);
+
+    @include phones {
+      height: rem(105px);
+      margin-bottom: rem(28px);
+    }
   }
 
   &:focus {
@@ -183,5 +201,9 @@
     background: transparent;
     color: $green;
     cursor: pointer;
+  }
+
+  @include phones {
+    margin-top: rem(10px);
   }
 }
