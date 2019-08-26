@@ -6,7 +6,10 @@
   z-index: 3;
 }
 
-.header__buttons {
+.nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
   @include tablets {
     display: none;
   }
@@ -14,13 +17,8 @@
 
 .nav__list {
   display: flex;
-}
-
-.nav__item {
-  margin-right: rem(15px);
-  &:last-child {
-    margin-right: 0;
-  }
+  justify-content: space-around;
+  width: 92%;
 }
 
 .nav__link {
