@@ -8,6 +8,12 @@
     position: absolute;
     left: 0;
     bottom: -16%;
+
+    @include phones {
+      width: rem(95px);
+      height: rem(317px);
+      bottom: -19%;
+    }
   }
   &__title {
     margin-bottom: rem(44px);
@@ -21,11 +27,15 @@
     @include tablets {
       flex-direction: column;
       align-items: center;
-      max-width: rem(460px);
+      max-width: rem(490px);
     }
 
     @include phones {
       padding: rem(25px);
+    }
+
+    @include small-phones {
+      padding: rem(6px);
     }
 
     &::before {
@@ -44,6 +54,15 @@
       @include phones {
         right: -3%;
         top: -41%;
+        width: rem(113px);
+        height: rem(79px);
+      }
+
+      @include small-phones {
+        right: -2%;
+        top: -19%;
+        width: rem(103px);
+        height: rem(69px);
       }
     }
 
@@ -55,10 +74,15 @@
         display: block;
         position: absolute;
         right: 0;
-        top: 0;
+        top: rem(25px);
         width: rem(119px);
         height: rem(167px);
         background: url('../img/reviews/reviews-flower.png') center center / cover no-repeat;
+      }
+
+      @include small-phones {
+        width: rem(99px);
+        height: rem(127px);
       }
     }
   }
@@ -113,6 +137,11 @@
     font-family: $medium;
     margin-top: rem(18px);
     margin-bottom: rem(25px);
+
+    @include small-phones {
+      margin-bottom: rem(15px);
+      margin-top: rem(10px);
+    }
   }
   &__text {
     color: $grey;
@@ -121,6 +150,10 @@
 
     @include tablets {
       width: 100%;
+    }
+
+    @include small-phones {
+      margin-bottom: rem(15px);
     }
   }
   &__author {

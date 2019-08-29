@@ -9,6 +9,16 @@
     top: -23%;
     background: url('../img/team/team-bg.png') center center / cover no-repeat;
     z-index: -1;
+
+    @include phones {
+      height: 70%;
+      top: -30%;
+      right: rem(-28px);
+    }
+
+    @include small-phones {
+      right: rem(-75px);
+    }
   }
 
   &:before {
@@ -20,6 +30,11 @@
     bottom: -5%;
     background: url('../img/team/team-berry.png') center center / cover no-repeat;
     z-index: 2;
+
+    @include phones {
+      height: rem(70px);
+      width: rem(65px);
+    }
   }
 }
 
@@ -45,6 +60,10 @@
   @include phones {
     justify-content: space-around;
   }
+
+  @include small-phones {
+    margin-left: 0;
+  }
 }
 
 .team__item {
@@ -54,6 +73,11 @@
   @include tablets {
     width: 34%;
     margin-left: rem(17px);
+  }
+
+  @include small-phones {
+    width: 40%;
+    margin-left: 0;
   }
 }
 
@@ -75,6 +99,10 @@
 
 .team__picture {
   margin-bottom: rem(25px);
+
+  @include small-phones {
+    margin-bottom: rem(10px);
+  }
 }
 
 .team__author {
@@ -86,6 +114,10 @@
   margin-bottom: rem(10px);
   position: relative;
   white-space: nowrap;
+
+  @include small-phones {
+    margin-bottom: rem(4px);
+  }
 
   &::after, &::before {
     content: "";
@@ -132,4 +164,8 @@
 .team__position--desc {
   color: $grey;
   font-family: $light;
+
+  @include small-phones {
+    font-size: rem(16px);
+  }
 }

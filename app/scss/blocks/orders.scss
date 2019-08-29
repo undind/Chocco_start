@@ -13,6 +13,11 @@
   @include phones {
     margin-bottom: rem(36px);
   }
+
+  @include small-phones {
+    font-size: rem(36px);
+    margin-bottom: rem(6px);
+  }
 }
 
 .form__elem {
@@ -80,13 +85,17 @@
 }
 
 .form__input {
-  padding: rem(22px) rem(11px);
+  padding: rem(18px) rem(11px);
   background-color: $white;
   width: 100%;
   border: 3px solid transparent;
 
   @include phones {
     padding: rem(17px) rem(11px);
+  }
+
+  @include small-phones {
+    padding: rem(10px) rem(7px);
   }
 
   &--textarea {
@@ -101,6 +110,7 @@
   }
 
   &:focus {
+    outline: 0;
     border: 3px solid #dde3bd;
   }
 }
@@ -113,6 +123,10 @@
       -ms-flex-align: center;
           align-items: center;
   margin-right: rem(30px);
+
+  @include small-phones {
+    margin-right: rem(10px);
+  }
 }
 
 .form__radio--fake {
