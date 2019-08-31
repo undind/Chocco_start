@@ -11,7 +11,8 @@
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; 
+  overflow: visible;
+  z-index: 99; 
   @include tablets {
     display: inline-block;
   }
