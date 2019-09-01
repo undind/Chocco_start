@@ -406,4 +406,12 @@
 	<symbol id="polygon_up" viewBox="0 0 9 6">
 		<g><g><path fill="#0f5a47" d="M4.506-.143L.006 5.86h9.001z"/></g></g>
 	</symbol>
+
+	<symbol id="arrow-left" viewBox="-1 0 16 29">
+		<defs><clipPath id="biy8a"><path fill="#fff" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726L13.994 27.83"/></clipPath></defs><g><g><path fill="none" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726L13.994 27.83"/><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="4" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726L13.994 27.83" clip-path="url(&quot;#biy8a&quot;)"/></g></g>
+	</symbol>
+
+	<symbol id="arrow-right" viewBox="1 0 15 29">
+		<defs><clipPath id="ow94a"><path fill="#fff" d="M1.006.817L12.772 11.46a3.973 3.973 0 0 1 0 5.726L1.006 27.83"/></clipPath></defs><g><g><path fill="none" d="M1.006.817L12.772 11.46a3.973 3.973 0 0 1 0 5.726L1.006 27.83"/><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="4" d="M1.006.817L12.772 11.46a3.973 3.973 0 0 1 0 5.726L1.006 27.83" clip-path="url(&quot;#ow94a&quot;)"/></g></g>
+	</symbol>
 </svg>

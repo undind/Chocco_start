@@ -1,0 +1,167 @@
+.assortment {
+  background-color: #f8faf9;
+}
+
+.assortment__slider {
+  overflow: hidden;
+}
+
+.assortment__list {
+  display: flex;
+  position: relative;
+  will-change: right;
+  transition: right 0.3s;
+}
+
+.assortment__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.assortment__photo {
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.assortment__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.assortment__popup-button {
+  display: block;
+  position: relative;
+  background-color: #00accf;
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 5px;
+  padding: rem(10px);
+  color: $white;
+  text-align: center;
+  margin-bottom: rem(35px);
+
+  &.active {
+    .assortment-popup {
+      opacity: 1;
+      left: 100%;
+    }
+  }
+}
+
+.assortment-popup {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  color: #333;
+  left: -99999px;
+  opacity: 0;
+  background-color: rgba($white, .9);
+  padding: rem(26px) rem(19px) rem(35px) rem(30px);
+}
+
+.assortment-popup__item {
+  display: flex;
+  align-items: center;
+  font-size: rem(16px);
+  font-family: $medium;
+  margin-bottom: rem(15px);
+  white-space: nowrap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.assortment-popup__image {
+  width: rem(35px);
+  height: rem(35px);
+  margin-right: rem(25px);
+}
+
+.assortment-popup__title {
+  margin-right: rem(30px);
+}
+
+.assortment-popup__weigth {
+  margin-left: auto;
+}
+
+.assortment__popup-icon {
+  width: rem(51px);
+  height: rem(51px);
+  fill:#fff;
+  stroke:#fff;
+}
+
+.assortment__title {
+  font-size: rem(36px);
+  text-align: left;
+  margin-bottom: rem(20px);
+}
+
+.assortment__desc {
+  color: $grey;
+}
+
+.assortment__text {
+  margin-bottom: rem(45px);
+}
+
+.assortment__value {
+  margin-bottom: rem(35px);
+  display: flex;
+}
+
+.assortment__calorific,
+.assortment__weight {
+  color: #333;
+}
+.assortment__calorific {
+  margin-right: rem(55px);
+}
+
+.assortment__calorific-value,
+.assortment__weight-value {
+  font-family: $bold;
+}
+
+.assortment__order {
+  display: flex;
+  align-items: center;
+}
+
+.assortment__price {
+  font-size: rem(60px);
+  font-family: $light;
+  color: $title;
+  margin-right: rem(35px);
+
+  & span {
+    font-size: rem(52px);
+  }
+}
+
+.assortment__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(13px);
+  height: rem(29px);
+  z-index: 4;
+}
+
+.assortment__control--left {
+  left: -4%;
+}
+
+.assortment__control--right {
+  right: -4%;
+}

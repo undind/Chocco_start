@@ -217,6 +217,11 @@
     cursor: pointer;
   }
 
+  &-assortment {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
   @include phones {
     margin-top: rem(10px);
   }
