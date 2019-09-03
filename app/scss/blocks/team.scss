@@ -39,6 +39,8 @@
 
 .team__title {
   margin-bottom: rem(57px);
+  z-index: 1;
+  position: relative;
 
   @include tablets {
     margin-bottom: rem(35px);
@@ -49,6 +51,8 @@
   display: flex;
   justify-content: space-between;
   min-height: rem(480px);
+  z-index: 1;
+  position: relative;
 
   @include tablets {  
     justify-content: center;

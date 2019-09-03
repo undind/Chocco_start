@@ -11,6 +11,7 @@
   position: relative;
   will-change: right;
   transition: right 0.3s;
+  z-index: 1;
 }
 
 .assortment__item {
@@ -18,11 +19,30 @@
   align-items: center;
   justify-content: space-between;
   min-width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
 }
 
 .assortment__photo {
   flex-shrink: 0;
   width: 50%;
+
+  @include tablets {
+    width: 65%;
+    margin-bottom: rem(25px);
+  }
+
+  @include phones {
+    width: 60%;
+  }
+
+  @include small-phones {
+    margin-top: rem(40px);
+  }
 }
 
 .assortment__content {
@@ -31,6 +51,18 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  @include tablets {
+    width: 73%;
+  }
+
+  @include phones {
+    width: 85%;
+  }
+
+  @include small-phones {
+    width: 100%;
+  }
 }
 
 .assortment__popup-button {
@@ -45,10 +77,21 @@
   text-align: center;
   margin-bottom: rem(35px);
 
+  @include tablets {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   &.active {
     .assortment-popup {
       opacity: 1;
       left: 100%;
+
+      @include tablets {
+        left: -300%;
+        z-index: 5;
+      }
     }
   }
 }
@@ -102,19 +145,43 @@
   font-size: rem(36px);
   text-align: left;
   margin-bottom: rem(20px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include small-phones {
+    font-size: rem(36px);
+  }
 }
 
 .assortment__desc {
   color: $grey;
+
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .assortment__text {
-  margin-bottom: rem(45px);
+  margin-bottom: rem(42px);
+
+  @include phones {
+    margin-bottom: rem(20px);
+  }
 }
 
 .assortment__value {
   margin-bottom: rem(35px);
   display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
+
+  @include small-phones {
+    margin-bottom: rem(15px);
+  }
 }
 
 .assortment__calorific,
@@ -133,6 +200,10 @@
 .assortment__order {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .assortment__price {
@@ -156,12 +227,37 @@
   width: rem(13px);
   height: rem(29px);
   z-index: 4;
+
+  @include tablets {
+    width: rem(16px);
+    height: rem(29px);
+  }
 }
 
 .assortment__control--left {
   left: -4%;
+
+  @include tablets {
+    left: 20%;
+    top: 35%;
+  }
+
+  @include phones {
+    left: 4%;
+    top: 23%;
+  }
 }
 
 .assortment__control--right {
   right: -4%;
+
+  @include tablets {
+    right: 14%;
+    top: 35%;
+  }
+
+  @include phones {
+    right: 4%;
+    top: 23%;
+  }
 }
