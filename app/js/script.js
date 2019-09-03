@@ -39,50 +39,96 @@ hamburgerButton.addEventListener('click', function (e) {
    }
   });
 
-  slider();
+slider();
 
-  function slider() { 
-    const sliderLeftButton = document.querySelector('.assortment__control--left');
-    const sliderRightButton = document.querySelector('.assortment__control--right');
-    const slider = document.querySelector('#slider');
-    const slides = document.querySelectorAll('.assortment__item');
-    const slide = document.querySelector('.assortment__item');
+function slider() { 
+  const sliderLeftButton = document.querySelector('.assortment__control--left');
+  const sliderRightButton = document.querySelector('.assortment__control--right');
+  const slider = document.querySelector('#slider');
+  const slides = document.querySelectorAll('.assortment__item');
+  const slide = document.querySelector('.assortment__item');
 
-    let minRight = 0;
-    let step = slide.offsetWidth;
-    let maxRight = (slides.length - 1) * step;
-    let currentRight = 0;
+  let minRight = 0;
+  let step = slide.offsetWidth;
+  let maxRight = (slides.length - 1) * step;
+  let currentRight = 0;
 
-    slider.style.right = currentRight;
+  slider.style.right = currentRight;
 
-    function leftMove() {
-      if (currentRight > minRight) {
-        currentRight -= step;
-        slider.style.right = currentRight + 'px';
-      } else {
-        currentRight = maxRight;
-        slider.style.right = maxRight + 'px';
-      }
+  function leftMove() {
+    if (currentRight > minRight) {
+      currentRight -= step;
+      slider.style.right = currentRight + 'px';
+    } else {
+      currentRight = maxRight;
+      slider.style.right = maxRight + 'px';
     }
+  }
 
-    function rightMove() {
-      if (currentRight < maxRight) {
-        currentRight += step;
-        slider.style.right = currentRight + 'px';
-      } else {
-        currentRight = minRight;
-        slider.style.right = minRight + 'px';
-      }
+  function rightMove() {
+    if (currentRight < maxRight) {
+      currentRight += step;
+      slider.style.right = currentRight + 'px';
+    } else {
+      currentRight = minRight;
+      slider.style.right = minRight + 'px';
     }
+  }
 
-    sliderLeftButton.addEventListener('click', e => {
+  sliderLeftButton.addEventListener('click', e => {
+    e.preventDefault();
+    leftMove();
+  });
+
+  sliderRightButton.addEventListener('click', e => {
+    e.preventDefault();
+    rightMove();
+  });
+
+  };
+
+  popup();
+
+  function popup() { 
+    const popupButton = document.querySelector('.assortment__popup-button');
+    
+    popupButton.addEventListener('click', e => {
       e.preventDefault();
-      leftMove();
-    });
 
-    sliderRightButton.addEventListener('click', e => {
+      if (popupButton.classList.contains('active')) {
+        popupButton.classList.remove('active');
+      } else {
+        popupButton.classList.add('active');
+      }
+      
+    });
+  };
+
+accardeon();
+
+function accardeon() { 
+  // const menuItems = document.querySelectorAll('.menu__items');
+  const menuLink = document.querySelectorAll('.menu__link');
+  
+  for (let i = 0; i < menuLink.length; i++) {
+    menuLink[i].addEventListener('click', e => {
       e.preventDefault();
-      rightMove();
+      const menuItem = menuLink[i].parentNode;
+      if (menuItem.classList.contains('menu__items--active')) {
+        menuItem.classList.remove('menu__items--active');
+      } else {
+        hide();
+        menuItem.classList.add('menu__items--active');
+      }
     });
+  }
 
-   }
+  function hide() { 
+    for (let i = 0; i < menuLink.length; i++) {
+      const menuItem = menuLink[i].parentNode;
+      menuItem.classList.remove('menu__items--active');
+    }
+  };
+};
+
+  //menu__items--active
