@@ -507,16 +507,16 @@
       <div class="container">
         <h2 class="title orders__title">Закажите доставку</h2>
         <div class="form">
-          <form action="" class="form__elem">
+          <form class="form__elem" id="myForm">
             <div class="form__column">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
@@ -547,7 +547,7 @@
             <div class="form__column">
               <label class="form__block form__block--textarea">
                 <div class="form__block-title">Комментарий</div>
-                <textarea class="form__input form__input--textarea"></textarea>
+                <textarea name="comment" class="form__input form__input--textarea"></textarea>
               </label>
               <div class="form__row">
                 <label class="form__radio">
@@ -569,7 +569,7 @@
                 </label>
               </div>
               <div class="form__buttons">
-                <button type="submit" class="btn">Заказать</button>
+                <button type="submit" class="btn" id="sendForm">Заказать</button>
                 <button type="reset" class="btn-reset">Очистить</button>
               </div>
             </div>
@@ -655,6 +655,14 @@
 
   </div>
 
+  <script type="template" id="overlayTemplate">
+    <div class="overlay">
+      <div class="overlay__container">
+        <div class="overlay__content"></div>
+        <button type="button" href="#" class="overlay__btn btn">Закрыть</button>
+      </div>
+    </div>
+  </script>
   <script src="js/script.js"></script>
 
 </body>

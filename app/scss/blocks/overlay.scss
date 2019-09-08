@@ -1,0 +1,32 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(#2f3234, 0.99);
+  z-index: 99;
+}
+
+.overlay__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: rem(35px) rem(60px);
+  background-color: $white;
+}
+
+.overlay__content {
+  color: #000;
+  margin-bottom: rem(20px);
+}
+
+.overlay__btn {
+  margin-right: 0;
+  margin-top: 0;
+}
