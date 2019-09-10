@@ -18,25 +18,10 @@
   &__title {
     margin-bottom: rem(44px);
   }
-  &__content {
-    background: url('../img/bg/reviews-bg.png') center center/cover no-repeat;
-    padding: rem(50px);
-    display: flex;
+
+  &__list {
     position: relative;
-
-    @include tablets {
-      flex-direction: column;
-      align-items: center;
-      max-width: rem(490px);
-    }
-
-    @include phones {
-      padding: rem(25px);
-    }
-
-    @include small-phones {
-      padding: rem(6px);
-    }
+    display: flex;
 
     &::before {
       content: '';
@@ -64,6 +49,34 @@
         width: rem(103px);
         height: rem(69px);
       }
+    }
+  }
+
+  &__content {
+    background: url('../img/bg/reviews-bg.png') center center/cover no-repeat;
+    padding: rem(50px);
+    display: flex;
+    position: relative;
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      max-width: rem(490px);
+    }
+
+    @include phones {
+      padding: rem(25px);
+    }
+
+    @include small-phones {
+      padding: rem(6px);
     }
 
     &::after {
@@ -107,8 +120,21 @@
   }
   &__item {
     margin-right: rem(11px);
-    border: 6px solid #0f5a47;
+    border: 6px solid transparent;
     border-radius: 50%;
+    transition: border .3s;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      border: 6px solid #0f5a47;
+    }
   }
 }
 
