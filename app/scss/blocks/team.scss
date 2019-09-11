@@ -86,7 +86,7 @@
 
 .team__item--active {
   & .team__position {
-    overflow: visible;
+    height: 100%;
   }
 
   & .team__author {
@@ -150,13 +150,13 @@
 }
 
 .team__img {
-  max-width: 100%;
-  display: block;
+  margin: 0 auto;
 }
 
 .team__position {
   height: 0;
   overflow: hidden;
+  transition: height .3s;
 }
 
 .team__position--title {

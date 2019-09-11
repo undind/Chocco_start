@@ -8,6 +8,10 @@
   top: rem(99px);
   left: rem(79px);
   color: $white;
+
+  @include small-phones {
+    left: rem(20px);
+  }
 }
 
 .menu__list {
