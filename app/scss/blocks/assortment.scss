@@ -37,7 +37,8 @@
   }
 
   @include phones {
-    width: 60%;
+    width: 80%;
+    margin-top: rem(55px);
   }
 
   @include small-phones {
@@ -244,7 +245,7 @@
 
   @include phones {
     left: 4%;
-    top: 23%;
+    top: 31%;
   }
 }
 
@@ -258,6 +259,6 @@
 
   @include phones {
     right: 4%;
-    top: 23%;
+    top: 31%;
   }
 }
