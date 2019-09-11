@@ -12,6 +12,10 @@
   will-change: right;
   transition: right 0.3s;
   z-index: 1;
+
+  @include phones {
+    min-height: 90vh;
+  }
 }
 
 .assortment__item {
@@ -38,11 +42,11 @@
 
   @include phones {
     width: 80%;
-    margin-top: rem(55px);
+    padding-top: rem(55px);
   }
 
   @include small-phones {
-    margin-top: rem(40px);
+    padding-top: rem(40px);
   }
 }
 
@@ -59,6 +63,7 @@
 
   @include phones {
     width: 85%;
+    justify-content: center;
   }
 
   @include small-phones {
